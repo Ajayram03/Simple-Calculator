@@ -1,2 +1,15 @@
 # Simple-Calculator
 HTML , CSS , JAVASCRIPT
+This HTML document creates a functional and visually appealing calculator using integrated CSS and JavaScript. In the <head> section, the document sets up metadata and a title for the page. The CSS, included directly in the <style> tag, provides detailed styling for the calculator's appearance and layout. The body is styled with a background image through the im class, which adds a dynamic visual element to the page. This class uses the background-image property to set a full-size background picture, while background-size: cover ensures the image covers the entire screen without distortion.
+
+The .calculator class styles the main container for the calculator. It features a dark background color (rgb(8, 8, 8)), a light border, rounded corners, and padding for spacing. A subtle box shadow (0 0 10px rgba(0,0,0,0.1)) adds depth, making the calculator appear elevated from the page. The width is set to 220px, which is ample for the calculator's layout.
+
+Inside the calculator, the input field, with the ID display, is styled to take up the full width of the container and has a light gray background (#ddd) for better contrast with the dark theme. It is disabled to prevent direct editing and acts solely as a display area for the current calculation or result.
+
+The calculator's buttons are styled for a consistent and clean look. The .calculator button rules set the general button style with a 20% width for each button, padding for spacing, and a border radius of 5px. The buttons have a light background color (#f1f1f1) and change to a darker shade (#ddd) on hover, providing visual feedback to the user. Special classes are used to differentiate operator buttons. The .operator class applies a distinctive background color (#fe9241) and white text for better visibility. Buttons with a .double class have adjusted widths to span across two columns, ensuring that larger buttons like 0 and = fit well within the calculator's grid.
+
+The JavaScript code provides functionality for the calculator. The appendToDisplay(value) function adds the clicked button’s value to the display input field. The clearDisplay() function clears the current value in the display when the 'C' button is clicked. The calculate() function evaluates the expression entered in the display using JavaScript's eval() function, which parses and executes the mathematical expression. If the expression is invalid, it catches errors and displays 'Error' in the input field to inform the user.
+
+Additional inline styles for specific buttons adjust their appearance further. For example, the 0 button has a custom width (95px), and the decimal point button has extra left margin to align properly with adjacent buttons. The equals button (=) spans across multiple columns with a width of 150px to make it prominent.
+
+Overall, this setup provides a functional and aesthetically pleasing calculator, combining simple HTML structure with CSS for styling and JavaScript for interactive functionality. The design ensures ease of use with clearly defined buttons and a user-friendly layout.
