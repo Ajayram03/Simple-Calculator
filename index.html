@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    border: 1px solid #070707;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 220px;
+    background-color: rgb(8, 8, 8);
+    margin-right: 10px;
+}
+
+.calculator input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: right;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.calculator button {
+    width: 20%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin: 2px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+.calculator button.operator {
+    background-color: #fe9241;
+    color: white;
+}
+
+.calculator button.double {
+    width: 46%;
+}
+
+.calculator button:hover {
+    background-color: #ddd;
+}
+.im{
+    background-image: url('https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2015/02/thumb_720_450_1411_f.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#display
+{
+    width: 176px;
+    margin-left: 4px;
+    background-color: #ddd;
+}
+
+</style>
+
+
+   
+<script>
+        function appendToDisplay(value) {
+    document.getElementById('display').value += value;
+}
+
+function clearDisplay() {
+    document.getElementById('display').value = '';
+}
+
+function calculate() {
+    const display = document.getElementById('display');
+    try {
+        display.value = eval(display.value);
+    } catch {
+        display.value = 'Error';
+    }
+}
+
+    </script>
+</head>
+<body class="im">
+    <div class="calculator">
+        <input type="text" id="display" placeholder="calculator" disabled>
+        <button onclick="clearDisplay()" class="operator">C</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('0')" style="width: 95px;" class="double">0</button>
+        <button onclick="appendToDisplay('.')" style="margin-left: 4px;">.</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="calculate()" class="operator" style="width: 150px;">=</button>
+      
+    </div>
+</body>
+</html>
